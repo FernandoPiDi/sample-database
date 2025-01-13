@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --primary: #3b82f6;
+  --border: #e5e7eb;
+}
+
+:root[data-theme="dark"] {
+  --background: #171717;
+  --foreground: #ffffff;
+  --primary: #60a5fa;
+  --border: #374151;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.2s ease-out forwards;
+}
+
+.animate-slide-down {
+  animation: slideDown 0.2s ease-out forwards;
+}
+
+.theme-switch {
+  width: 3rem;
+  height: 1.5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.theme-switch[data-theme="dark"] {
+  background-color: #3b82f6;
+}
+
+.theme-switch-handle {
+  width: 1.25rem;
+  height: 1.25rem;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 0.125rem;
+  left: 0.125rem;
+  transition: transform 0.2s;
+}
+
+.theme-switch[data-theme="dark"] .theme-switch-handle {
+  transform: translateX(1.5rem);
+}
+
+/* Estilos para el menú móvil */
+.menu-button {
+  transition: all 0.2s;
+}
+
+.menu-button:hover {
+  transform: scale(1.1);
+}
+
+/* Animación para el menú desplegable */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.mobile-menu {
+  animation: fadeIn 0.2s ease-out forwards;
+}
