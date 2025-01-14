@@ -141,14 +141,29 @@ npm run dev
 
 ### Running the Backend
 
-1. First, make sure Docker is running and start the PostgreSQL and Redis services:
+#### Requirements
+
+1. Make sure you have installed:
+
+- Java 17 or higher
+- Maven
+- Docker
+
+2. Go to the backend directory and install the dependencies:
+
+```sh
+cd backend
+./mvnw clean install
+```
+
+3. Make sure Docker is running and start the PostgreSQL and Redis services:
 
 ```sh
 cd build
 docker-compose up -d
 ```
 
-2. Then, go to the backend directory and run it with Maven.
+4. Then, go to the backend directory and run it with Maven.
 
 ```sh
 cd ../backend
