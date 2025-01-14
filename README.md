@@ -20,6 +20,7 @@ This is a complete application built with Spring Boot for the backend and React 
 - Redis
 - Docker
 - Maven
+- SpringDoc OpenAPI
 
 ## Project Structure
 
@@ -138,10 +139,18 @@ npm install
 npm run dev
 ```
 
-### Running the Backend 
+### Running the Backend
 
-1. To install the dependencies
+1. First, make sure Docker is running and start the PostgreSQL and Redis services:
 
 ```sh
-./nvm ....
+cd build
+docker-compose up -d
+```
+
+2. Then, go to the backend directory and run it with Maven.
+
+```sh
+cd ../backend
+./mvnw spring-boot:run
 ```
