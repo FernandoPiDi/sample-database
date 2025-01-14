@@ -1,6 +1,6 @@
 # Sample Database
 
-This is a complete application built with Spring Boot for the backend and React + Next.js for the frontend, using TypeScript for robust and typed development. The backend provides a REST API for managing products, featuring functionalities like adding, listing, and searching for products, with optimized queries using Redis. The frontend consumes this API and displays the data in a list, offering an intuitive user experience. The integration between both layers ensures efficient data flow and a solid architecture for real-world environments.
+This application is a complete solution built with Spring Boot for the backend and React + Next.js for the frontend, leveraging TypeScript for robust and type-safe development. The backend provides a REST API for managing products, including functionalities like adding, listing, and searching for products, with optimized queries powered by Redis. The frontend, designed with a responsive and mobile-friendly interface, consumes this API to display data in an intuitive list format, featuring a dark theme for improved user experience. Both services are integrated to ensure efficient data flow and a solid architecture suited for real-world scenarios. Code quality is maintained through linting for both frontend and backend services, with automated checks implemented via GitHub Actions. Additionally, Docker is used to containerize and run the services, ensuring seamless deployment and scalability.
 
 ## Tech stack
 
@@ -12,56 +12,37 @@ This is a complete application built with Spring Boot for the backend and React 
 - Docker
 - Maven
 - SpringDoc OpenAPI
+- Lombok
+- Flyway
 
 ## Project Structure
 
+```
 test_lottusse/
-
 ├── backend/ # Spring Boot application
-
 │ ├── src/
-
 │ │ ├── main/
-
 │ │ │ ├── java/
-
 │ │ │ │ └── com/lotusse/devtest/
-
 │ │ │ │ ├── config/ # Application configurations and beans
-
 │ │ │ │ ├── controller/ # REST API endpoints
-
 │ │ │ │ ├── dto/ # Data Transfer Objects
-
 │ │ │ │ ├── entity/ # JPA entities/database models
-
 │ │ │ │ ├── exception/ # Custom exceptions and error handlers
-
 │ │ │ │ ├── repository/ # Database access interfaces
-
 │ │ │ │ ├── service/ # Business logic implementation
-
 │ │ │ │ └── DevtestApplication.java # Main application class
-
 │ │ │ └── resources/ # Application properties and static resources
-
 │ │ └── test/ # Unit and integration tests
-
 │ ├── .mvn/ # Maven wrapper directory
-
 │ ├── target/ # Compiled output
-
 │ ├── .env # Environment variables
-
 │ ├── .gitignore # Git ignore rules
-
 │ ├── mvnw # Maven wrapper script (Unix)
-
 │ ├── mvnw.cmd # Maven wrapper script (Windows)
-
 │ ├── pom.xml # Project dependencies and build config
-
 │ └── README.md # Backend documentation
+```
 
 # Setup
 
