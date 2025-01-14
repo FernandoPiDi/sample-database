@@ -65,12 +65,12 @@ export default function Listar({ searchTerm }: ListarProps) {
               style={{ cursor: "pointer" }}
             >
               <h2 className="product-title">{product.name}</h2>
-              {/* <div className="product-dates">
+              <div className="product-dates">
                 <p>Created: {new Date(product.createdAt).toLocaleString()}</p>
-                {product.updatedAt && (
+                {/* {product.updatedAt && (
                   <p>Updated: {new Date(product.updatedAt).toLocaleString()}</p>
-                )}
-              </div> */}
+                )} */}
+              </div>
             </div>
           ))
         )}

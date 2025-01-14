@@ -35,7 +35,6 @@ export default function Navbar({ onSearch }: NavbarProps) {
   const searchContainerRef = useRef<HTMLDivElement>(null);
   const menuRef = useRef<HTMLDivElement>(null);
 
-  // Efecto para mantener el estado de visibilidad en localStorage
   useEffect(() => {
     localStorage.setItem("isSearchVisible", isSearchVisible.toString());
     localStorage.setItem(
@@ -44,7 +43,7 @@ export default function Navbar({ onSearch }: NavbarProps) {
     );
   }, [isSearchVisible, isMobileSearchVisible]);
 
-  // Efecto para mantener la barra visible después de la navegación
+  // edfecto para mantener la barra visible despues de la navegación
   useEffect(() => {
     if (pathname === "/" && (isSearchVisible || isMobileSearchVisible)) {
       const searchInput = document.querySelector('input[type="text"]');

@@ -20,18 +20,15 @@ export default function CrearProducto({ onClose }: CrearProductoProps) {
       return data;
     },
     onSuccess: (newProduct: Product) => {
-      // Actualizar la caché de productos
       queryClient.setQueryData<Product[]>(["products"], (oldProducts = []) => {
         return [...oldProducts, newProduct];
       });
 
-      // Invalidar la consulta para forzar una recarga
       queryClient.invalidateQueries({ queryKey: ["products"] });
       onClose();
     },
     onError: (error) => {
       console.error("Error al crear el producto:", error);
-      // Aquí podrías agregar una notificación de error si lo deseas
     },
   });
 

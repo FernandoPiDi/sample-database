@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./DetalleProducto.css";
 import { Product } from "@/types/product";
 
@@ -11,12 +11,23 @@ const DetalleProducto: React.FC<DetalleProductoProps> = ({
   product,
   onClose,
 }) => {
+  useEffect(() => {
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, []);
+
   if (!product) return null;
+
+  const handleModalClick = (e: React.MouseEvent) => {
+    e.stopPropagation();
+  };
 
   return (
     <div className="modal-overlay" onClick={onClose}>
-      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={onClose}>
+      <div className="modal-content" onClick={handleModalClick}>
+        <button className="close-button" onClick={onClose} aria-label="Cerrar">
           &times;
         </button>
         <div className="product-detail">
