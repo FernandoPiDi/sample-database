@@ -45,12 +45,11 @@ export default function CrearProducto({ onClose }: CrearProductoProps) {
 
   return (
     <div className="crear-producto-container">
-      <h2 className="text-2xl font-bold mb-4">Crear Nuevo Producto</h2>
+      <h2 className="text-2xl font-bold mb-6 text-center">
+        Crear Nuevo Producto
+      </h2>
       <form onSubmit={handleSubmit} className="crear-producto-form">
         <div className="mb-4">
-          <label htmlFor="nombre" className="block mb-2">
-            Nombre del Producto
-          </label>
           <input
             type="text"
             id="nombre"
