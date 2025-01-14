@@ -120,3 +120,26 @@ test_lottusse/
 
 - Copy `backend/.env.dist` to `backend/.env`
 - Replace the values with your own variables
+
+### Runnig the Frontend
+
+1. To install the dependencies execute
+   
+```sh
+cd frontend
+npm install
+```
+
+2. Run the project in developer mode
+
+```sh
+npm run dev
+```
+
+### Running the Backend 
+
+1. To install the dependencies
+
+```sh
+./nvm ....
+```
