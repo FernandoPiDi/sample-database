@@ -1,5 +1,7 @@
 # Sample Database
 
+<img src="docs/Test.png" alt="Application Screenshot" width="800"/>
+
 This application is a complete solution built with Spring Boot for the backend and React + Next.js for the frontend, leveraging TypeScript for robust and type-safe development. The backend provides a REST API for managing products, including functionalities like adding, listing, and searching for products, with optimized queries powered by Redis. The frontend, designed with a responsive and mobile-friendly interface, consumes this API to display data in an intuitive list format, featuring a dark theme for improved user experience. Both services are integrated to ensure efficient data flow and a solid architecture suited for real-world scenarios. Code quality is maintained through linting for both frontend and backend services, with automated checks implemented via GitHub Actions. Additionally, Docker is used to containerize and run the services, ensuring seamless deployment and scalability.
 
 ## Tech stack

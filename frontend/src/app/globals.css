@@ -60,6 +60,9 @@ body {
   position: relative;
   cursor: pointer;
   transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  padding: 0.125rem;
 }
 
 .theme-switch[data-theme="dark"] {
@@ -71,14 +74,26 @@ body {
   height: 1.25rem;
   background-color: white;
   border-radius: 50%;
-  position: absolute;
-  top: 0.125rem;
-  left: 0.125rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   transition: transform 0.2s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .theme-switch[data-theme="dark"] .theme-switch-handle {
   transform: translateX(1.5rem);
+}
+
+.theme-switch-handle svg {
+  color: #3b82f6;
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+.theme-switch[data-theme="dark"] .theme-switch-handle svg {
+  color: #171717;
 }
 
 /* Estilos para el menú móvil */
