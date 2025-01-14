@@ -1,9 +1,11 @@
 "use client";
 
+import React from "react";
 import { useState, useRef, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 interface NavbarProps {
+  // eslint-disable-next-line no-unused-vars
   onSearch: (term: string) => void;
 }
 
